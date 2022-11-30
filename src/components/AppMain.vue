@@ -1,9 +1,11 @@
 <script>
-import AppCard from './AppCard.vue';
+import MovieCard from './MovieCard.vue';
 import { store } from '../store';
+import ShowCard from './ShowCard.vue';
 export default {
    components: {
-      AppCard,
+      MovieCard,
+      ShowCard,
    },
    data() {
       return {
@@ -16,16 +18,18 @@ export default {
 <template>
    <main>
       <!-- lista film-->
-      <!-- <ul class="list movies-list">
+      <ul class="list movies-list">
          <li v-for="movie in store.movies">
-            <AppCard :info="movie" />
+            <MovieCard :info="movie" />
          </li>
-      </ul> -->
+      </ul>
       <!-- /lista film-->
       <hr class="border border-2 opacity-100" />
       <!-- lista shows -->
       <ul class="list shows-list">
-         <li v-for="show in store.shows">card show</li>
+         <li v-for="show in store.shows">
+            <ShowCard :info="show" />
+         </li>
       </ul>
       <!-- /lista shows -->
    </main>

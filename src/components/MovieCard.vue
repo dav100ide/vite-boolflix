@@ -1,18 +1,18 @@
 <script>
-import { store } from '../store';
+// import { store } from '../store';
 export default {
-   data() {
-      return {
-         store,
-      };
-   },
+   // data() {
+   //    return {
+   //       store,
+   //    };
+   // },
    props: {
       info: Object,
    },
 };
 </script>
 <template>
-   <div class="ms_card h-100">
+   <div class="movie h-100">
       <h2>{{ info.title }}</h2>
       <h6>{{ info.original_title }}</h6>
       <div>{{ info.vote_average }}</div>
@@ -22,7 +22,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.ms_card {
+.movie {
    border: 1px solid black;
    padding: 0.5rem;
 }
