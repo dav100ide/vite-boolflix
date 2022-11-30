@@ -16,24 +16,37 @@ export default {
 <template>
    <main>
       <!-- lista film-->
-      <ul class="movies-list">
+      <!-- <ul class="list movies-list">
          <li v-for="movie in store.movies">
             <AppCard :info="movie" />
          </li>
-      </ul>
+      </ul> -->
       <!-- /lista film-->
+      <hr class="border border-2 opacity-100" />
+      <!-- lista shows -->
+      <ul class="list shows-list">
+         <li v-for="show in store.shows">card show</li>
+      </ul>
+      <!-- /lista shows -->
    </main>
 </template>
 
 <style lang="scss" scoped>
-.movies-list {
+.list {
    display: flex;
    flex-wrap: wrap;
-   color: rgb(9, 9, 87);
+   padding: 0;
    list-style: none;
    li {
       width: calc(100% / 3);
       padding: 10px;
    }
+}
+.movies-list {
+   color: darkred;
+}
+
+.shows-list {
+   color: darkblue;
 }
 </style>
