@@ -1,11 +1,27 @@
 <script>
-export default {};
+import { store } from '../store.js';
+export default {
+   data() {
+      return {
+         store,
+      };
+   },
+   methods: {
+      search() {
+         console.log(store.searchText);
+      },
+   },
+};
 </script>
 
 <template>
-   <div>
+   <header>
       <h1>Boolflix</h1>
-   </div>
+      <form action="" @submit.prevent="search">
+         <input type="text" v-model="store.searchText" />
+         <button type="submit">cerca</button>
+      </form>
+   </header>
 </template>
 
 <style lang="scss" scoped></style>
