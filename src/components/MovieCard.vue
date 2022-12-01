@@ -1,11 +1,5 @@
 <script>
-// import { store } from '../store';
 export default {
-   // data() {
-   //    return {
-   //       store,
-   //    };
-   // },
    props: {
       info: Object,
    },
@@ -18,6 +12,8 @@ export default {
       <div>{{ info.vote_average }}</div>
       <!-- <img src="" alt=""> bandiera che dice la lingua -->
       <p>{{ info.original_language }}</p>
+      <font-awesome-icon icon="fa-solid fa-star" />
+      <font-awesome-icon icon="fa-regular fa-star" />
    </div>
 </template>
 
