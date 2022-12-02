@@ -26,6 +26,10 @@ export default {
       starNum() {
          return Math.ceil(this.info.vote_average / 2);
       },
+      posterSrc() {
+         const posterSrc = this.info.poster_path ? `https://image.tmdb.org/t/p/w342${this.info.poster_path}` : 'https://via.placeholder.com/350x500';
+         return posterSrc;
+      },
    },
 };
 </script>
@@ -35,8 +39,8 @@ export default {
       <h6>{{ info.original_title || info.original_name }}</h6>
       <font-awesome-icon v-for="n in starNum" icon="fa-solid fa-star" />
       <font-awesome-icon v-for="n in 5 - starNum" icon="fa-regular fa-star" />
-      <img :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`" :alt="info.title" class="img-fluid" />
-      <div><country-flag :country="getFlag(info.original_language)" /></div>
+      <img :src="posterSrc" :alt="info.title" class="img-fluid" />
+      <country-flag :country="getFlag(info.original_language)" />
    </div>
 </template>
 
