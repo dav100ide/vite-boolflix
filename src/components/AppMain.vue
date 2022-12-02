@@ -16,14 +16,15 @@ export default {
 <template>
    <main>
       <!-- lista film-->
-      <ul class="list movies-list">
+      <ul class="list">
          <li v-for="movie in store.movies">
             <AppCard :info="movie" />
          </li>
       </ul>
       <!-- /lista film-->
+      <hr class="border-2" />
       <!-- lista shows -->
-      <ul class="list shows-list">
+      <ul class="list">
          <li v-for="show in store.shows">
             <AppCard :info="show" />
          </li>
@@ -39,15 +40,17 @@ export default {
    padding: 0;
    list-style: none;
    li {
-      width: calc(100% / 3);
+      width: calc(100% / 2);
       padding: 10px;
+      @media (width > 576px) {
+         width: calc(100% / 3);
+      }
+      @media (width > 992px) {
+         width: calc(100% / 4);
+      }
+      @media (width > 1200px) {
+         width: calc(100% / 5);
+      }
    }
-}
-.movies-list {
-   // color: darkred;
-}
-
-.shows-list {
-   // color: darkblue;
 }
 </style>

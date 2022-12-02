@@ -70,6 +70,10 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   flex-direction: column;
+   @media (width > 576px) {
+      flex-direction: row;
+   }
    .logo {
       width: 12rem;
    }

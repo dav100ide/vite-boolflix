@@ -37,7 +37,7 @@ export default {
 </script>
 <template>
    <div class="ms_card">
-      <div class="ms_card__front w-100 h-100">
+      <div class="ms_card__front">
          <img :src="posterSrc" :alt="info.title" class="rounded-3 w-100" />
       </div>
       <div class="ms_card__back rounded-3">
@@ -48,6 +48,10 @@ export default {
             <font-awesome-icon v-for="n in 5 - starNum" icon="fa-regular fa-star" />
          </div>
          <country-flag :country="getFlag(info.original_language)" />
+         <p v-if="info.overview">
+            {{ info.overview }}
+         </p>
+         <p v-else>spiacenti non c'è un overview per "{{ info.title || info.name }}"</p>
       </div>
    </div>
 </template>
@@ -76,15 +80,28 @@ export default {
       left: 0;
       right: 0;
       bottom: 0;
+
       display: flex;
       flex-direction: column;
+
       background-color: var(--neutral-color-600);
       border: 2px solid var(--neutral-color-600);
       padding: 0.5rem;
+
       backface-visibility: hidden;
       transform: rotateX(180deg);
       transition: 0.5s;
       overflow-y: auto;
+
+      p {
+         font-size: 1rem;
+         margin-top: 1rem;
+      }
+   }
+   h2 {
+      color: var(--primary-color);
+      text-align: center;
+      font-weight: bold;
    }
 }
 </style>
