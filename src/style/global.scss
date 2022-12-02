@@ -13,3 +13,26 @@ IMPORT BOOTSTRAP
    --neutral-color-600: rgb(86, 77, 77);
    --neutral-color-900: black;
 }
+
+/*==========================
+    commons
+===========================*/
+.list {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0;
+   list-style: none;
+   li {
+      width: calc(100% / 2);
+      padding: 10px;
+      @media (width > 576px) {
+         width: calc(100% / 3);
+      }
+      @media (width > 992px) {
+         width: calc(100% / 4);
+      }
+      @media (width > 1200px) {
+         width: calc(100% / 5);
+      }
+   }
+}
