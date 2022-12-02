@@ -36,9 +36,9 @@ export default {
 };
 </script>
 <template>
-   <div class="ms_card">
-      <div class="ms_card__front">
-         <img :src="posterSrc" :alt="info.title" class="rounded-3 w-100" />
+   <div class="ms_card h-100">
+      <div class="ms_card__front h-100">
+         <img :src="posterSrc" :alt="info.title" class="rounded-3 w-100 h-100" />
       </div>
       <div class="ms_card__back rounded-3">
          <h2>{{ info.title || info.name }}</h2>
@@ -71,7 +71,8 @@ export default {
       transform: rotateX(0deg);
       transition: 0.5s;
       img {
-         object-fit: contain;
+         object-fit: cover;
+         object-position: center;
       }
    }
    &__back {
