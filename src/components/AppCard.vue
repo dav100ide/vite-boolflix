@@ -63,9 +63,6 @@ export default {
       transform: rotateX(0deg);
    }
    &__front {
-      position: absolute;
-      top: 0;
-      left: 0;
       backface-visibility: hidden;
       transform: rotateX(0deg);
       transition: 0.5s;
@@ -74,6 +71,9 @@ export default {
       }
    }
    &__back {
+      position: absolute;
+      top: 0;
+      left: 0;
       display: flex;
       flex-direction: column;
       background-color: var(--neutral-color-600);
