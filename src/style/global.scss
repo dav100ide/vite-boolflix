@@ -1,4 +1,15 @@
 /*----------------
 IMPORT BOOTSTRAP
 ----------------*/
-@import "/node_modules/bootstrap/scss/bootstrap";
+@import '/node_modules/bootstrap/scss/bootstrap';
+/*==========================
+   my variables
+===========================*/
+:root {
+   //colors
+   --primary-color: rgb(219, 0, 0);
+   --primary-color-600: rgb(131, 16, 16);
+   --neutral-color-100: white;
+   --neutral-color-600: rgb(86, 77, 77);
+   --neutral-color-900: black;
+}

@@ -55,12 +55,33 @@ export default {
 
 <template>
    <header>
-      <h1>Boolflix</h1>
+      <div class="logo">
+         <img src="../../assets/boolflix-logo.png" alt="logo" class="img-fluid" />
+      </div>
       <form action="" @submit.prevent="search">
-         <input type="text" v-model="store.searchText" required />
-         <button type="submit">cerca</button>
+         <input type="text" v-model="store.searchText" placeholder="film o serie Tv" required />
+         <button class="btn btn-dark" type="submit">CERCA</button>
       </form>
    </header>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   .logo {
+      width: 12rem;
+   }
+   input {
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.5rem;
+      &:focus {
+         outline: 0;
+      }
+      &::placeholder {
+         font-style: italic;
+      }
+   }
+}
+</style>

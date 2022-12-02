@@ -18,4 +18,8 @@ export default {
 
 <style lang="scss">
 @import './style/global.scss';
+body {
+   background-color: var(--neutral-color-900);
+   color: var(--neutral-color-100);
+}
 </style>

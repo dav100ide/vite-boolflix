@@ -22,7 +22,6 @@ export default {
          </li>
       </ul>
       <!-- /lista film-->
-      <hr class="border border-2 opacity-100" />
       <!-- lista shows -->
       <ul class="list shows-list">
          <li v-for="show in store.shows">
@@ -45,10 +44,10 @@ export default {
    }
 }
 .movies-list {
-   color: darkred;
+   // color: darkred;
 }
 
 .shows-list {
-   color: darkblue;
+   // color: darkblue;
 }
 </style>
