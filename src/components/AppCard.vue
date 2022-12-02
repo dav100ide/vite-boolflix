@@ -30,9 +30,9 @@ export default {
 };
 </script>
 <template>
-   <div class="movie h-100">
-      <h2>{{ info.title }}</h2>
-      <h6>{{ info.original_title }}</h6>
+   <div class="ms_card h-100">
+      <h2>{{ info.title || info.name }}</h2>
+      <h6>{{ info.original_title || info.original_name }}</h6>
       <font-awesome-icon v-for="n in starNum" icon="fa-solid fa-star" />
       <font-awesome-icon v-for="n in 5 - starNum" icon="fa-regular fa-star" />
       <img :src="`https://image.tmdb.org/t/p/w342${info.poster_path}`" :alt="info.title" class="img-fluid" />
@@ -41,7 +41,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.movie {
+.ms_card {
    background-color: #ddd;
    border: 1px solid black;
    padding: 0.5rem;
